@@ -1,0 +1,127 @@
+/* Gallery (transitions) */
+.gallery.onload-fade-in article .image img,
+.gallery.onscroll-fade-in article .image img {
+    opacity: 1; /* Ensure images are visible */
+    transition: opacity 1s ease-in-out;
+}
+
+/* Gallery (style1) */
+.gallery.style1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.gallery.style1 article {
+    position: relative;
+    width: 20%; /* Smaller image width */
+    overflow: hidden;
+}
+
+.gallery.style1 article .image {
+    display: block;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 0;
+}
+
+.gallery.style1 article .image img {
+    display: block;
+    width: 80%; /* Reduced image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0;
+}
+
+.gallery.style1 article .caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gallery.style1 article:hover .caption {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    .gallery.style1 article {
+        width: 30%; /* Adjusted for medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery.style1 article {
+        width: 50%; /* Adjusted for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery.style1 article {
+        width: 100%; /* Full width for mobile */
+    }
+}
+
+/* Gallery (style2) */
+.gallery.style2 article {
+    display: block;
+    width: 15rem; /* Smaller default width */
+    max-width: 70vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery.style2 article .image {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+}
+
+.gallery.style2 article .image img {
+    display: block;
+    width: 70%; /* Reduced size for style2 */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0;
+}
+
+.gallery.style2 article .caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gallery.style2 article:hover .caption {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .gallery.style2 article {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery.style2 article {
+        width: 100%;
+    }
+}
